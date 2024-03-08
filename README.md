@@ -69,12 +69,19 @@ CSS
 JavaScript
 Fetch API or Axios
 Public Recipe API (e.g., Spoonacular, Edamam, TheMealDB)
-Installation
+
+How to run project
+
 Clone the repository:
+
+https://github.com/jitendrakumararkha/Recipe-Finder-Web-Application/edit/master
+
 bash
+
 Copy code
-git clone https://github.com/your-username/recipe-finder.git
-Open index.html in your web browser.
+
+Open home.html in your web browser.
+
 Credits
 This project was created as part of a task and was inspired by the requirements provided.
 

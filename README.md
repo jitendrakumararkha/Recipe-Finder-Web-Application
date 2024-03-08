@@ -49,6 +49,7 @@ Implement the ability to save favorite recipes for later reference using browser
 
 <img width="953" alt="store_fav_recipe" src="https://github.com/jitendrakumararkha/Recipe-Finder-Web-Application/assets/101549973/5a35bd6c-4d31-4604-9e7b-a4524dce8164">
 
+ These below are Recipes that are stored previously by User in local Storage.
 <img width="960" alt="UserfavRec" src="https://github.com/jitendrakumararkha/Recipe-Finder-Web-Application/assets/101549973/fda1dbde-6ddd-4c18-90ed-74678824f531">
 
 Enhanced Styling: 

@@ -73,13 +73,17 @@ Public Recipe API (e.g., Spoonacular, Edamam, TheMealDB)
 
 How to run project
 
-1)Download zip file of this repository:  from   https://github.com/jitendrakumararkha/ShopBrowsify-website.
+1)Download zip file of this repository:  from  https://github.com/jitendrakumararkha/Recipe-Finder-Web-Application.
 
-2)Extract zip folder
+2) Go to Green code Button
 
-3)Open it on vs code 
+3) Download Zip folder of this code
 
-4)Run home.html file on live server in your web browser.
+4)Extract zip folder on computer
+
+5)Open it on vs code 
+
+6)Run home.html file on live server in your web browser.
 
 
 Credits

@@ -75,9 +75,9 @@ How to run project
 
 1)Download zip file of this repository:  from  https://github.com/jitendrakumararkha/Recipe-Finder-Web-Application.
 
-2) Go to Green code Button
+2)Go to Green code Button
 
-3) Download Zip folder of this code
+3)Download Zip folder of this code
 
 4)Extract zip folder on computer
 

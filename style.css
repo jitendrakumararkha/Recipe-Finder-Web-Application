@@ -1,0 +1,374 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+  background-color:#28282b;
+  color: #fff;
+
+}
+nav{
+  background-color: #652c2c;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+
+}
+ nav h1{
+  font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+   
+}
+   nav form{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 41%;
+   
+
+  }
+  form input[type="text"]{
+    flex-grow: 1;
+    margin-right: -4px;
+    border-radius: 3px;
+    font-size: 20px;
+    height: 40px;
+
+  }
+  form button[type="submit"]{
+        border: none;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+
+  }
+  form button[type="submit"]:hover,.recipe button:hover{
+        background-color: #ff5c5c;
+                 
+  }
+  .recipe-container{
+    text-align: center;
+    margin-top: 20px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap:40px;
+    width: 80%;
+    margin: 10px auto;
+    padding:10px;
+    place-items:center;
+  }
+  @media screen and (max-width:850px){
+             nav {
+                flex-direction: column;
+              }
+              nav form {
+                width:80%;
+                margin-top:20px;
+                display: flex;
+                flex-direction: column;
+               justify-content: center;
+               position: unset;
+              }
+             
+              
+                
+  }
+ 
+/*
+    home page styling 
+*/
+
+.container{
+  display: flex;
+    background-color: #433c44;
+    justify-content: center;
+    /* gap: 30px; */
+    align-items: center;
+    height: 45vh;
+    width: auto;
+    flex-direction: column;
+}
+.row{
+  display: flex;
+    flex-wrap: wrap;
+    height: 150px;
+    width: 404px;
+}
+.optionBtn{
+  margin: 6px;
+  display: flex;
+  background-color: #9f0e04;
+  color: #fff;
+  height: 90%;
+  width: 46%;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  transition:transform  5 ms ease-in-out;
+}
+.optionBtn:hover{
+  background-color: #ff5c5c;
+   transform: scale(.9876);
+  
+}
+
+/*              recipe styling cart  */
+ .recipe{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  border-radius:6px;
+  box-shadow:0 5px 10px rbga(78,73,73,0.1);
+  cursor: pointer;
+  max-width: 350px;
+  transition:transform 0.3s ease-in-out;
+  position: relative;
+}
+.recipe:hover{
+    transform: scale(1.02);
+}
+ .recipe img{
+
+  height: 300px;
+ }
+ .recipe h3{
+  font-size: 24px;
+  margin-block: 5px;
+
+ } 
+ .recipe p{
+  font-size: 20px;
+  color: #4a4a4a;
+  margin: 5px 0;
+ }
+ .recipe span{
+     font-weight: 600;
+ }
+ .recipe button{
+   font-size: 20px;
+   font-weight: 600;
+   padding: 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin: 18px auto;
+   border: none;
+   background-color:#e31b0c;
+   color: #fff;
+   
+ }
+ .recipe-details{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform:translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 12px;
+  background-color: #694c2f;
+  width: 40%;
+  height: 60%;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+  overflow-y: scroll;
+  padding: 10px;
+ 
+ }
+ .recipeName{
+   text-align: center;
+   text-transform: uppercase;
+   text-decoration: underline;
+ }
+.ingredientList{
+  margin-bottom: 10px;
+  margin-left: -20px;
+
+}
+.recipeInstructions{
+        line-height: 30px;
+        white-space: pre-line;
+
+}
+.recipe-close-btn{
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #f44336;
+  color:#fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.authdiv {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 80px;
+}
+.authdiv h1{
+    color: #f8f2f2;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+ .authdiv [type="text"],
+ .authdiv [type="password"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #efe8e8;
+  margin: 4px;
+  font-size: 20px;
+}
+.authdiv [type="email"]{
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin: 4px;
+  font-size: 20px;
+}
+  .authdiv   button {
+  background-color: #ce1d10;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+ .authdiv  button:hover {
+  background-color: #a31208;
+}
+
+.navbarstyle{
+    
+    display: flex;
+    justify-content: end;
+    /* align-items: center; */
+    padding-top: 13px
+}
+.navbarstyle a{
+  color: white;
+  font-size: 25px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.navbarstyle a:hover{
+  
+  cursor: pointer;
+}
+
+.headerStyle{
+  display: flex;
+    justify-content: space-between;
+    background-color: #802121;
+    height: 70px;
+
+}
+
+ 
+  .anchorTag{
+    background-color: rgb(60, 223, 60);
+    margin-left: 10px;
+    border-radius: 4px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 82px;
+    height: 40px;
+    position: absolute;
+    right: 9%;
+  }
+  .Favbtn{
+    position: relative;
+    right: -23.5%;
+    background-color: rgb(16, 58, 175);
+    margin-left: 10px;
+    border-radius: 7px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 82px;
+    height: 45px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+    
+    .Favbtn:hover{
+      background-color: #8054ef;
+    }
+  @media screen and (max-width:850px) {
+    .headerStyle{
+     display: flex;
+    
+    }
+    .anchorTag{
+      position: absolute;
+      right: 0%;
+      top: 2%;
+    } 
+    .Favbtn{
+      right: 0;
+      margin: 2px;
+      width: 80%;
+    }
+}
+  
+  .anchorTag a{
+    text-decoration: none;
+    color: white;
+    padding-top: 0px;
+    cursor: pointer;
+  }
+  .Favbtn a{
+    text-decoration: none;
+    color: white;
+    padding-top: 0px;
+    cursor: pointer;
+  }
+  .anchorTag:hover{
+     background-color: rgb(20, 162, 20);
+  }
+ header h2{
+  padding-top: 12px;
+ }
+ input{
+  background-color: white;
+    color: black;
+    border: 1px solid black;
+ }
+ .favBtn{
+  position: absolute;
+    top: -4%;
+    left: 0%
+ }
+ 

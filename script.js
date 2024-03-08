@@ -94,6 +94,14 @@ const formCartOfRecipe = (data, flag) => {
         favRecipeBtn.addEventListener("click", (e) => {
           storeFavRecipe(item);
         });
+      } else {
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerHTML = `<i class="fa-solid fa-trash-arrow-up"></i>`;
+        recipeDiv.appendChild(deleteBtn);
+        deleteBtn.addEventListener("click", () => {
+          deleteRecipe(item);
+          showRecipe();
+        });
       }
       recipeContainer.appendChild(recipeDiv);
     });
@@ -140,6 +148,7 @@ const showRecipe = () => {
   const favRecipe = UserFavRecipe[user];
   console.log(favRecipe);
   formCartOfRecipe(favRecipe, 1);
+  return;
 };
 const storeFavRecipe = (recipe) => {
   const name = localStorage.getItem("currUser");
@@ -148,4 +157,23 @@ const storeFavRecipe = (recipe) => {
   UserFavRecipe[name] = UserFavRecipe[name] || [];
   UserFavRecipe[name].push(recipe);
   localStorage.setItem("UserFavRecipe", JSON.stringify(UserFavRecipe));
+  alert("Your fav Recipe is stored!!");
+  return;
+};
+
+const deleteRecipe = (recipe) => {
+  let UserFavRecipe = JSON.parse(localStorage.getItem("UserFavRecipe"));
+  const currUser = localStorage.getItem("currUser");
+  let recipes = UserFavRecipe[currUser];
+  console.log(recipes);
+  const updatedRecipes = recipes.filter(
+    (element) => `${element.idMeal}` !== `${recipe.idMeal}`
+  );
+  // Assuming `item` is the item you want to remove
+  console.log(updatedRecipes);
+
+  UserFavRecipe[currUser] = updatedRecipes;
+  localStorage.setItem("UserFavRecipe", JSON.stringify(UserFavRecipe));
+  alert("you deleted 1 fav Recipe");
+  return;
 };

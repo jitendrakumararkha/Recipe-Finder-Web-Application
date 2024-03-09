@@ -158,7 +158,7 @@ const storeFavRecipe = (recipe) => {
   UserFavRecipe[name] = UserFavRecipe[name] || [];
   UserFavRecipe[name].push(recipe);
   localStorage.setItem("UserFavRecipe", JSON.stringify(UserFavRecipe));
-  alert("Your fav Recipe is stored!!");
+  alert("Your fav Recipe is stored in local storage!!");
   return;
 };
 

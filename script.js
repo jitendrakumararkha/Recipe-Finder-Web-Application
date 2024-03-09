@@ -12,7 +12,7 @@ navbar.innerHTML = `
                 <button type="submit" class="searchBtn"  id="searchByIngredBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
                
             </form>
-            <div class="anchorTag"><a href="/home.html">Logout</a></div>
+            <div class="anchorTag"><button type="button" onclick="Logout()">Logout</a></div>
             <button type="button" class="Favbtn" onclick="showRecipe()">FavRecipe</button>
              <h4>${currUser}</h4>
           `;
@@ -102,6 +102,7 @@ const formCartOfRecipe = (data, flag) => {
           deleteRecipe(item);
           showRecipe();
         });
+        alert(`${currUser},"s favaroite Recipes"`);
       }
       recipeContainer.appendChild(recipeDiv);
     });
@@ -175,5 +176,11 @@ const deleteRecipe = (recipe) => {
   UserFavRecipe[currUser] = updatedRecipes;
   localStorage.setItem("UserFavRecipe", JSON.stringify(UserFavRecipe));
   alert("you deleted 1 fav Recipe");
+  return;
+};
+const Logout = () => {
+  let currUser = localStorage.getItem("currUser");
+  localStorage.setItem("currUser", "");
+  window.location.href = "home.html";
   return;
 };

@@ -40,14 +40,14 @@ const displayData = async (item) => {
     );
     //if(data) console.log("name");
     if (!data) {
-      console.log("name");
+    
       data = await fetch(
         `https://www.themealdb.com/api/json/v1/1/list.php?i=${item}`
       );
     }
     // if(data) console.log("ingred");
     if (!data) {
-      console.log("ing");
+     
       data = await fetch(
         `https://www.themealdb.com/api/json/v1/1/filter.php?c=${item}`
       );
@@ -55,7 +55,7 @@ const displayData = async (item) => {
     }
     // if(data) console.log("Cate");
     if (!data) {
-      console.log("categ");
+     
       data = await fetch(
         `https://www.themealdb.com/api/json/v1/1/search.php?f=${item[0]}`
       );
@@ -63,7 +63,7 @@ const displayData = async (item) => {
 
     const jsondata = await data.json();
     let html = "";
-    console.log(jsondata);
+   
     formCartOfRecipe(jsondata.meals, 0);
   } catch (error) {
     recipeContainer.innerHTML = `<img src="${imgurl}" alt="notfound" height="400px" width="400px">`;
@@ -102,7 +102,7 @@ const formCartOfRecipe = (data, flag) => {
           deleteRecipe(item);
           showRecipe();
         });
-        alert(`${currUser},"s favaroite Recipes"`);
+      
       }
       recipeContainer.appendChild(recipeDiv);
     });
@@ -147,7 +147,7 @@ const showRecipe = () => {
   console.log(user);
   const UserFavRecipe = JSON.parse(localStorage.getItem("UserFavRecipe"));
   const favRecipe = UserFavRecipe[user];
-  console.log(favRecipe);
+  
   formCartOfRecipe(favRecipe, 1);
   return;
 };
@@ -166,7 +166,7 @@ const deleteRecipe = (recipe) => {
   let UserFavRecipe = JSON.parse(localStorage.getItem("UserFavRecipe"));
   const currUser = localStorage.getItem("currUser");
   let recipes = UserFavRecipe[currUser];
-  console.log(recipes);
+ 
   const updatedRecipes = recipes.filter(
     (element) => `${element.idMeal}` !== `${recipe.idMeal}`
   );
@@ -175,7 +175,7 @@ const deleteRecipe = (recipe) => {
 
   UserFavRecipe[currUser] = updatedRecipes;
   localStorage.setItem("UserFavRecipe", JSON.stringify(UserFavRecipe));
-  alert("you deleted 1 fav Recipe");
+  alert("you deleted 1 favorite Recipe");
   return;
 };
 const Logout = () => {
@@ -184,3 +184,4 @@ const Logout = () => {
   window.location.href = "home.html";
   return;
 };
+

@@ -139,7 +139,7 @@ searchBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const searchInput = searchBox.value.trim();
   if (searchInput) displayData(searchInput);
-  else recipeContainer.innerHTML = `<h2> Type the Recipe Name</h2>`;
+  else recipeContainer.innerHTML = `<h2>Type the Recipe Name or Ingredient</h2>`;
 });
 
 const showRecipe = () => {

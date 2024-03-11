@@ -5,7 +5,6 @@ This web application allows users to search for recipes based on ingredients or 
 Features
 Search Functionality: Users can search for recipes by entering ingredients or keywords in the search input field.
 
-<img width="960" alt="WebHomepage" src="https://github.com/jitendrakumararkha/Recipe-Finder-Web-Application/assets/101549973/c7c1b002-898c-44bf-9c77-1b52325aceba">
 
 <img width="960" alt="SearchUserReq" src="https://github.com/jitendrakumararkha/Recipe-Finder-Web-Application/assets/101549973/7c47968c-cb6a-4704-96cd-2b7cb8660e2c">
 

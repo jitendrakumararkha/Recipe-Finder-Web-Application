@@ -2,7 +2,7 @@ const navbar = document.querySelector(".Navbar");
 const currUser = localStorage.getItem("currUser");
 
 if (!currUser) {
-  window.location.href = "/home.html";
+  window.location.href = "https://jitendrakumararkha.github.io/Recipe-Finder-Web-Application/index.html";
 }
 console.log(currUser);
 navbar.innerHTML = `
@@ -20,7 +20,7 @@ navbar.innerHTML = `
 const searchBox = document.querySelector(".searchBox");
 const searchBtn = document.querySelector(".searchBtn");
 
-const imgurl = "/3814348.jpg";
+const imgurl = "https://jitendrakumararkha.github.io/Recipe-Finder-Web-Application/3814348.jpg";
 
 const recipeContainer = document.querySelector(".recipe-container");
 const recipeDetailsContent = document.querySelector(".recipe-details-content");
@@ -181,7 +181,7 @@ const deleteRecipe = (recipe) => {
 const Logout = () => {
   let currUser = localStorage.getItem("currUser");
   localStorage.setItem("currUser", "");
-  window.location.href = "home.html";
+  window.location.href = "https://jitendrakumararkha.github.io/Recipe-Finder-Web-Application/index.html";
   return;
 };
 

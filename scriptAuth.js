@@ -14,7 +14,7 @@ const Registration = () => {
  // console.log(JSON.stringify(userData));
   alert("Registration Successfull");
   localStorage.setItem('currUser',name);
-  window.location.href="/Ingredient.html";
+  window.location.href="https://jitendrakumararkha.github.io/Recipe-Finder-Web-Application/Ingredient.html";
 }
 
 const LoginCheck = () => {
@@ -28,11 +28,11 @@ const LoginCheck = () => {
     
      alert('Login successfull!')
       localStorage.setItem('currUser',Users[email].name);
-     window.location.href="/Ingredient.html";
+     window.location.href="https://jitendrakumararkha.github.io/Recipe-Finder-Web-Application/Ingredient.html";
     
  }else{
    alert('Invalid useremail or password')
-   window.location.href="/Login.html";
+   window.location.href="https://jitendrakumararkha.github.io/Recipe-Finder-Web-Application/Login.html";
  }
     
 }
